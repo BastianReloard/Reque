@@ -1,17 +1,4 @@
 ==================================================================================================================================================
-Feature:HU01-
-Scenario:
-Given
-And
-When
-And
-Then
-
-Examples:
-
-|boton pasos|Boton Salir|
-| clik()    | clik()    | 
-==================================================================================================================================================
 Feature:HU01-Como donador quiero registrarme en la aplicación para poder donar a las personas que se encuentran en extrema pobreza.
 
 Scenario: El [donador] se registra con éxito en la aplicación.
@@ -64,6 +51,25 @@ Then la aplicación [muestra] la información de la campaña seleccionada.
 Examples: 
 | Campañas   | DatosUsuario |     MotrarCamp      |    MostrarCampS                    |
 | clik()     |     Datos    |  Mostrar Campañas   |    Mostrar Campaña Seleccionada    |
+==================================================================================================================================================
+Feature:HU04-
+
+Scenario: El donador dona dinero a través de la aplicación con tarjeta de débito.
+Given que el donador al encontrar un caso con el cual se sienta identificado o quiera ayudar.
+When da clic en la opción [donar] y luego en [dinero]
+And selecciona la opción [tarjeta de débito].
+Then el donador tendrá que llenar los datos de su tarjeta y elegir el monto a donar.
+
+Scenario: El donador dona dinero a través de la aplicación con depósito..
+Given que el donador al encontrar un caso con el cual se sienta identificado.
+When da clic en la opción [donar] y luego en [dinero].
+And selecciona la opción [depósito].
+Then el donador podrá realizar el depósito en cualquier banco y/o agencias con el número de cuenta que aparecerá en la aplicación.
+
+Examples: 
+
+| Donar   | Dinero  |TarjetaDebito |Deposito | DatosUsuario |     DonacionT                   |    NonacionD                        |
+| clik()  | clik()  |clik()        |  clik() |     Datos    |  Mostrar Donacion por Tarjeta   |    Mostrar Donacion por Deposito    |
 
 ==================================================================================================================================================
 Feature:HU05-Como donador quiero donar productos de primera necesidad para poder ayudar a las personas que pasan por pobreza extrema. 
