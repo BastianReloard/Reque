@@ -1,2 +1,2 @@
-Feature:
+Feature:HU01-Como usuario de la App quiero una guía de paso a paso  para conocer todas  las funcionalidades que brinda la aplicación.
 
