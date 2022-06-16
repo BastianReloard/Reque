@@ -52,7 +52,7 @@ Examples:
 | Campañas   | DatosUsuario |     MotrarCamp      |    MostrarCampS                    |
 | clik()     |     Datos    |  Mostrar Campañas   |    Mostrar Campaña Seleccionada    |
 ==================================================================================================================================================
-Feature:HU04-
+Feature:HU04-Como donador quiero donar dinero para poder ayudar a las personas que pasan por pobreza extrema. 
 
 Scenario: El donador dona dinero a través de la aplicación con tarjeta de débito.
 Given que el donador al encontrar un caso con el cual se sienta identificado o quiera ayudar.
