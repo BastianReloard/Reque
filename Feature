@@ -1,6 +1,101 @@
-Feature:HU01-Como usuario de la App quiero una guía de paso a paso  para conocer todas  las funcionalidades que brinda la aplicación.
-Feature
-Feature
-Feature
-Feature
-Feature
+==================================================================================================================================================
+Feature:HU01-
+Scenario:
+Given
+And
+When
+And
+Then
+
+Examples:
+
+|boton pasos|Boton Salir|
+| clik()    | clik()    | 
+==================================================================================================================================================
+Feature:HU01-Como donador quiero registrarme en la aplicación para poder donar a las personas que se encuentran en extrema pobreza.
+
+Scenario: El [donador] se registra con éxito en la aplicación.
+Given que el donador al abrir la aplicación encuentra la opción de [iniciar sesión] y [registrarse].
+And haga clic en la opción [“registrarse”].
+When se haya registrado completamente con todos sus [datos] y con éxito.
+Then la aplicación permite que el donador tenga un perfil en la aplicación.
+
+Scenario: El [donador] se registra sin éxito en la aplicación.
+Given que el donador al abrir la aplicación encuentra la opción de [iniciar sesión] y [registrarse].
+And haga clic en la opción [“registrarse”].
+When no complete el registro con todos sus [datos] y sin éxito.
+Then la aplicación muestra un [mensaje] de error al registrarse.
+
+Examples:
+|Registrarse| Nombre  | Apellido|Correo electronico|  Contraseña |
+| clik()    | Unknown | Unknown |   @gmail.com     |  ejemplo123 | 
+==================================================================================================================================================
+Feature:HU02-Como donador quiero visualizar los casos de ayuda social para poder ayudar en lo que pueda.
+
+Scenario: El donador visualiza los casos de ayuda.
+Given que el donador una vez que ingrese a la aplicación con sus [datos], habrá varias secciones, entre ellas la de casos.
+And da clic en la opción [“casos”].
+When la aplicación muestre el listado de casos.
+Then el usuario [visualiza] todos los casos disponibles .
+
+Scenario: El donador selecciona los casos de ayuda de su interés.
+Given que el donador se encuentra en la sección de casos registrados
+When el usuario seleccione un caso con el cual se sienta identificado .
+Then la aplicación muestra la información del caso seleccionado.
+
+Examples:
+| Casos  | DatosUsuario |     MotrarC     |    MostrarCE                  |
+| clik() |     Datos    |  Mostrar Casos  |    Mostrar Caso Especifico    |
+
+==================================================================================================================================================
+Feature:HU03-Como donador quiero visualizar las campañas de ayuda en la aplicación para poder participar en ellas. 
+
+Scenario: El donador visualiza las campañas de ayuda.
+Given que el donador una vez que ingrese a la aplicación con sus [datos], habrá varias secciones, entre ellas la de campañas.
+When da clic en la opción [“campañas”]
+Then la aplicación [muestra] el listado de campañas
+
+
+Scenario: El donador participa en las campañas de ayuda.
+Given que el usuario se encuentra [visualizando] las campañas,.
+When el usuario seleccione una campaña
+Then la aplicación [muestra] la información de la campaña seleccionada.
+
+Examples: 
+| Campañas   | DatosUsuario |     MotrarCamp      |    MostrarCampS                    |
+| clik()     |     Datos    |  Mostrar Campañas   |    Mostrar Campaña Seleccionada    |
+
+==================================================================================================================================================
+Feature:HU05-Como donador quiero donar productos de primera necesidad para poder ayudar a las personas que pasan por pobreza extrema. 
+
+Scenario: El donador dona productos de primera necesidad a través de la aplicación.
+Given que el donador una vez que ingrese a la aplicación con sus [datos], al encontrar un caso con el cual se sienta identificado o quiera ayudar.
+When da clic en la opción [“donar”] y luego [“producto”].
+Then la aplicación [muestra] los lugares autorizados por Munay para dejar los productos de primera necesidad.
+
+Examples:
+| Donar   | Producto| DatosUsuario |     MotrarU                   |
+| clik()  | clik()  |     Datos    |  Mostrar Ubicacion de lugares |  
+==================================================================================================================================================
+Feature:HU06-Como donador quiero verificar que los donativos están distribuidos correctamente para poder confiar en la aplicación.  
+
+Scenario: El donador visualiza la distribución de donativos.
+Given que el donador una vez que ingrese a la aplicación con sus [datos],quiere saber si sus donaciones están siendo distribuidas correctamente, busca en la aplicación
+When da clic en la opción [“Donativos”] y luego [“Distribución de donativos”]
+Then la aplicación  [muestra] que personas y/o familias fueron apoyadas con dinero y/o productos.
+ 
+Examples:
+| Donativos   | Distribucion Donativos| DatosUsuario |
+| clik()      | clik()                |     Datos    |   
+
+
+
+
+
+
+
+
+
+
+
+
