@@ -15,7 +15,7 @@ Then la aplicación muestra un [mensaje] de error al registrarse.
 
 Examples:
 |Registrarse| Nombre  | Apellido|Correo electronico|  Contraseña |
-| clik()    | Unknown | Unknown |   @gmail.com     |  ejemplo123 | 
+| click()    | Unknown | Unknown |   @gmail.com     |  ejemplo123 | 
 ==================================================================================================================================================
 Feature:HU02-Como donador quiero visualizar los casos de ayuda social para poder ayudar en lo que pueda.
 
@@ -31,8 +31,8 @@ When el usuario seleccione un caso con el cual se sienta identificado .
 Then la aplicación muestra la información del caso seleccionado.
 
 Examples:
-| Casos  | DatosUsuario |     MotrarC     |    MostrarCE                  |
-| clik() |     Datos    |  Mostrar Casos  |    Mostrar Caso Especifico    |
+| Casos   | DatosUsuario |     MotrarC     |    MostrarCE                  |
+| click() |     Datos    |  Mostrar Casos  |    Mostrar Caso Especifico    |
 
 ==================================================================================================================================================
 Feature:HU03-Como donador quiero visualizar las campañas de ayuda en la aplicación para poder participar en ellas. 
@@ -49,8 +49,8 @@ When el usuario seleccione una campaña
 Then la aplicación [muestra] la información de la campaña seleccionada.
 
 Examples: 
-| Campañas   | DatosUsuario |     MotrarCamp      |    MostrarCampS                    |
-| clik()     |     Datos    |  Mostrar Campañas   |    Mostrar Campaña Seleccionada    |
+| Campañas    | DatosUsuario |     MotrarCamp      |    MostrarCampS                    |
+| click()     |     Datos    |  Mostrar Campañas   |    Mostrar Campaña Seleccionada    |
 ==================================================================================================================================================
 Feature:HU04-Como donador quiero donar dinero para poder ayudar a las personas que pasan por pobreza extrema. 
 
@@ -68,8 +68,8 @@ Then el donador podrá realizar el depósito en cualquier banco y/o agencias con
 
 Examples: 
 
-| Donar   | Dinero  |TarjetaDebito |Deposito | DatosUsuario |     DonacionT                   |    NonacionD                        |
-| clik()  | clik()  |clik()        |  clik() |     Datos    |  Mostrar Donacion por Tarjeta   |    Mostrar Donacion por Deposito    |
+| Donar    | Dinero   |TarjetaDebito  |Deposito  | DatosUsuario |     DonacionT                   |    NonacionD                        |
+| click()  | click()  |click()        |  click() |     Datos    |  Mostrar Donacion por Tarjeta   |    Mostrar Donacion por Deposito    |
 
 ==================================================================================================================================================
 Feature:HU05-Como donador quiero donar productos de primera necesidad para poder ayudar a las personas que pasan por pobreza extrema. 
@@ -91,8 +91,8 @@ When da clic en la opción [“Donativos”] y luego [“Distribución de donati
 Then la aplicación  [muestra] que personas y/o familias fueron apoyadas con dinero y/o productos.
  
 Examples:
-| Donativos   | Distribucion Donativos| DatosUsuario |
-| clik()      | clik()                |     Datos    |   
+| Donativos    | Distribucion Donativos | DatosUsuario |
+| click()      | click()                |     Datos    |   
 
 
 
