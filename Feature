@@ -93,13 +93,48 @@ Then la aplicación  [muestra] que personas y/o familias fueron apoyadas con din
 Examples:
 | Donativos    | Distribucion Donativos | DatosUsuario |
 | click()      | click()                |     Datos    |   
+==================================================================================================================================================
+Feature:HU07-Como donador, quiero saber como encuentran casos para agregarlas a la app.
 
+Scenario:: La app busca casos en la ciudad.
+Given  que la app es nueva, comienza a buscar casos en distintos lugares de la ciudad.
+And las que encuentra se van registrando con la opción [Registrar casos]
+When se haya registrado una buena cantidad de casos.
+Thenla aplicación [mostrará] en la app para todos los usuarios todos los casos registrados y que se van registrando.
 
+Scenario: La app busca casos en linea.
+Given que la app es nueva, comienza a buscar casos en distintas páginas web donde compartan estos casos.
+And las que encuentra se van registrando con la opción [Registrar casos].
+When se haya registrado una buena cantidad de casos.
+Then la aplicación [mostrará] en la app para todos los usuarios todos los casos registrados y que se van registrando.
 
+| Registrar Casos    | Distribucion Donativos |     MostrarCR                   | MostrarCRL                     |
+| click()            | click()                |     Mostrar Casos Registrados   | Mostrar Casos Registrados Linea|  
+==================================================================================================================================================
+Feature:HU08-Como donador, quiero un servicio de atención al cliente en caso de problemas o otras cosas relacionadas con la app.
 
+Scenario: Al donador no le carga la última donación que hizo.
+Given que el donador no ve su última donación realizada, piensa que es un problema de la aplicación que no guardó el pago.
+And da en la opción [Servicio al cliente].
+When el asistente lo atienda, el usuario podrá explicar el problema para informar a la app.
+And el asistente informará a los demás para poder arreglar el problema.
+Then cuando se solucione, le aparecerá un [Mensaje] en la pantalla al donador y podrá ver el [Historial] con la donación que haya hecho.
 
+| Servicio Cliente   | Mensaje            |     MostrarH           | 
+| click()            | Mensaje de Error   |     Mostrar Historial  |   
+==================================================================================================================================================
+Feature:HU09-Como donador, quiero saber como contactar con los de la app para que agreguen un caso a la app.
 
+Escenario: Un donador conoce a una persona que requiere de apoyo económico.
+Dado que el donador desea agregar un caso para ayudar a esa persona y busca como contactarlos
+Y encuentra la opción [servicio al cliente].
+Cuando se comunique con un asistente de la app, la persona dará los [datos] más importantes del caso.
+Entonces al finalizar esto, el asistente registrará el caso.
 
+| Servicio Cliente    |  RegistrarC        | Situacion del Caso | Datos Importantes           |
+| click()             |  Registrar Casos   | Unknown(necesidad) | Unknown(Datos de personas)  |
+
+==================================================================================================================================================
 
 
 
